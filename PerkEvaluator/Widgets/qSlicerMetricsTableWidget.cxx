@@ -368,23 +368,23 @@ void qSlicerMetricsTableWidget
   for ( int i = 0; i < metricsTableTable->GetNumberOfRows(); i++ )
   {
     QString nameString;
-    nameString.append( metricsTableTable->GetValueByName( i, "MetricName" ).ToString() );
+    nameString.append( metricsTableTable->GetValueByName( i, "MetricName" ).ToString().c_str() );
     
     if ( this->ShowMetricRoles )
     {
       nameString.append( " [" );
-      nameString.append( metricsTableTable->GetValueByName( i, "MetricRoles" ).ToString() );
+      nameString.append( metricsTableTable->GetValueByName( i, "MetricRoles" ).ToString().c_str() );
       nameString.append( "]" );
     }
 
     nameString.append( " (" );
-    nameString.append( metricsTableTable->GetValueByName( i, "MetricUnit" ).ToString() );
+    nameString.append( metricsTableTable->GetValueByName( i, "MetricUnit" ).ToString().c_str() );
     nameString.append( ")" );
     QTableWidgetItem* nameItem = new QTableWidgetItem( nameString );
     d->MetricsTable->setItem( i, metricsTableHeaders.indexOf( "Metric" ), nameItem );
 
     QString valueString;
-    valueString.append( metricsTableTable->GetValueByName( i, "MetricValue" ).ToString() );
+    valueString.append( metricsTableTable->GetValueByName( i, "MetricValue" ).ToString().c_str());
     QTableWidgetItem* valueItem = new QTableWidgetItem( valueString );    
     d->MetricsTable->setItem( i, metricsTableHeaders.indexOf( "Value" ), valueItem );
 
@@ -392,7 +392,7 @@ void qSlicerMetricsTableWidget
     for ( int j = 0; j < taskNames.count(); j++ )
     {
       QString taskValueString;
-      taskValueString.append( metricsTableTable->GetValueByName( i, taskNames.at( j ).toLatin1() ).ToString() );
+      taskValueString.append( metricsTableTable->GetValueByName( i, taskNames.at( j ).toLatin1() ).ToString().c_str());
       QTableWidgetItem* taskValueItem = new QTableWidgetItem( taskValueString );
       d->MetricsTable->setItem( i, metricsTableHeaders.indexOf( taskNames.at( j ) ), taskValueItem );
     }
