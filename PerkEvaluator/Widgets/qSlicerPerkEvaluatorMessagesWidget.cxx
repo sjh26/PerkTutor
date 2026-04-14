@@ -20,6 +20,7 @@
 
 // FooBar Widgets includes
 #include "qSlicerPerkEvaluatorMessagesWidget.h"
+#include "ui_qSlicerTrackedSequenceMessagesWidget.h"
 
 #include <QtGui>
 #include <QInputDialog>
