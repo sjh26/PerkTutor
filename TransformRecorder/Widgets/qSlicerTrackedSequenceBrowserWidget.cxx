@@ -20,6 +20,7 @@
 
 // FooBar Widgets includes
 #include "qSlicerTrackedSequenceBrowserWidget.h"
+#include "ui_qSlicerTrackedSequenceBrowserWidget.h"
 
 #include "qSlicerIOManager.h"
 
