@@ -20,6 +20,8 @@
 
 // FooBar Widgets includes
 #include "qSlicerPerkEvaluatorAnalysisDialogWidget.h"
+#include "ui_qSlicerPerkEvaluatorAnalysisDialogWidget.h"
+
 
 #include <QtGui>
 

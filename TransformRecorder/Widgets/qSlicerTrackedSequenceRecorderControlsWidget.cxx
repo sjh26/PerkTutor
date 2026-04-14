@@ -20,6 +20,8 @@
 
 // FooBar Widgets includes
 #include "qSlicerTrackedSequenceRecorderControlsWidget.h"
+#include "ui_qSlicerTrackedSequenceRecorderControlsWidget.h"
+
 #include "vtkMRMLSequenceBrowserNode.h"
 
 #include <QtGui>
